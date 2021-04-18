@@ -1,0 +1,32 @@
+[
+    {
+        "role_id": "0",
+        "role_key": "coding",
+        "role_value": "Прогеры"
+    },
+    {
+        "role_id": "1",
+        "role_key": "colorwheel",
+        "role_value": "Дизайнеры"
+    },
+    {
+        "role_id": "2",
+        "role_key": "palette",
+        "role_value": "Художники"
+    },
+    {
+        "role_id": "3",
+        "role_key": "gamepad",
+        "role_value": "Геймеры"
+    },
+    {
+        "role_id": "4",
+        "role_key": "dice",
+        "role_value": "Ролевики"
+    },
+    {
+        "role_id": "5",
+        "role_key": "cutlet",
+        "role_value": "Киберкотлеты"
+    }
+]
