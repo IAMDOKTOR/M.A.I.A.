@@ -1,6 +1,6 @@
-TOKEN = ''  # bot token
+TOKEN = 'NzEwMTgwNDExMDE1NDMwMTk0.XrwtDA.Y3LJlz3gayapjU131Ycr_JfQ8sM'  # bot token
 
-POST_ID = 0  # post id to read reactions from
+POST_ID = 833270126400241674  # post id to read reactions from
 
 VERSION = '1.5.21'  # just for fun
 
