@@ -1,13 +1,7 @@
-TOKEN = ''  # bot token
+TOKEN = "PUT_TOKEN_HERE"
+#Майя токен
+POST_ID = 111  # post id to read reactions from
 
-POST_ID = 0  # post id to read reactions from
+VERSION = '5.09.21'  # just for fun
 
-VERSION = '1.5.21'  # just for fun
-
-HELP_INFO = \
-    f"""Привет, меня зовут M.A.I.A.!\n
-Моя нынешняя версия - {VERSION}\n\n
-Пока что я только обучаюсь, пожалуйста, не обижайте меня :sweat_smile: \n\n
-Сейчас я умею:\n
-- Отвечать на приветствие\n
-- Выдавать роли на канале "получение-ролей"""
+MAIA_NAMES = ['Майя', 'майя', 'MAIA', 'M.A.I.A.', 'maia', 'm.a.i.a.']

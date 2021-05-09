@@ -1,6 +1,10 @@
+
 import discord
 import config
-from botCommand import check_role_in_database
+import json
+import numpy as np
+
+from botCommand import check_role_in_database, check_maia_name, check_string_in_reaction, id_reaction
 
 
 intents = discord.Intents.all()
@@ -17,7 +21,6 @@ async def on_raw_reaction_add(payload):  # give role to a user
     if payload.message_id == config.POST_ID:
         
         guild = payload.member.guild
-        print(check_role_in_database("coding"))
         database_role =  check_role_in_database(payload.emoji.name)
 
         discord_role = discord.utils.get(guild.roles, name=database_role)
@@ -32,6 +35,7 @@ async def on_raw_reaction_add(payload):  # give role to a user
                 print('[ERROR] Server Member not found')
         else:
             print('[ERROR] Discord Role not found')
+
 
 
 @client.event
@@ -65,16 +69,39 @@ async def on_message(message):
         print(message.author , ' | ' , client.user)
         return
 
-    print(message.content.lower().find('$hello'))
+    if (check_maia_name(message)):
+        print(check_maia_name(message))
+        with open('json_data/reactions_list.json', 'r', encoding='utf-8') as array_react: 
+            reactions_list_length = len(json.load(array_react))
+            check_id_reaction = [0] * reactions_list_length
 
-    if message.content.lower().find('$hello') != -1:
-        await message.channel.send('Hello!')
+        id_max = 0
+        array_message = message.content.split()
 
+        for msg in array_message:
+            answer_id = check_string_in_reaction(msg)
+
+            if answer_id != None:
+                check_id_reaction[answer_id] += 1                     
+        
+        for number in check_id_reaction:
+            if id_max <= number:
+                id_max = number
+        
+        if id_max == 0:
+            await message.channel.send('Я вас не поняла. Попробуйте сказать иначе.')
+        else:
+            id_index = check_id_reaction.index(id_max)
+
+            answer = id_reaction(id_index)
+            if answer == 'СПРАВОЧНИК':
+                await message.channel.send(config.HELP_INFO)
+            else:
+                await message.channel.send(answer)
     
 
 
 def read_token():
     return config.TOKEN
-
 
 client.run(read_token())
