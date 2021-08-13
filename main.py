@@ -17,7 +17,7 @@ async def on_ready():
 
 
 @client.event
-async def on_raw_reaction_add(payload):
+async def on_raw_reaction_add(payload):  # add role to a user
     if payload.message_id == config.POST_ID:
         
         guild = payload.member.guild
