@@ -1,7 +1,9 @@
-TOKEN = "PUT_TOKEN_HERE"
+TOKEN = ""
 #Майя токен
-POST_ID = 111  # post id to read reactions from
+POST_ID = 0 # post id to read reactions from
 
-VERSION = '5.09.21'  # just for fun
+VERSION = '6.11.22'  # just for fun
 
 MAIA_NAMES = ['Майя', 'майя', 'MAIA', 'M.A.I.A.', 'maia', 'm.a.i.a.']
+
+BOOZE_CHANNEL_ID = 0

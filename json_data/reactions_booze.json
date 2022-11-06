@@ -1,0 +1,57 @@
+[
+
+	{
+        "react_id": 0,
+        "react_info": "red_wine",
+		"react_words": [ "красное", "красного"],
+		"react_answer": "Красное вино для "
+	},
+    {
+        "react_id": 1,
+        "react_info": "white_wine",
+		"react_words": [ "белое", "белого", "white"],
+		"react_answer": "Белое вино для "
+	},
+    {
+        "react_id": 2,
+        "react_info": "whiskey",
+		"react_words": [ "вискаря", "виски", "whiskey", "вискарь", "вискарика", "бурбон"],
+		"react_answer": "Отличный выбор! Двойной Crown Royal за счёт заведения для "
+	},
+    {
+        "react_id": 3,
+        "react_info": "fireball_shot",
+		"react_words": [ "шот", "шотов", "шота"],
+		"react_answer": "Файербол шоты для "
+	},
+    {
+        "react_id": 4,
+        "react_info": "beer",
+		"react_words": [ "пиво", "пивка", "пивчанского", "пивас", "пиваса", "пива"],
+		"react_answer": "Пиво для "
+	},
+    {
+        "react_id": 5,
+        "react_info": "cider",
+		"react_words": [ "сидр", "сидра", "сидор"],
+		"react_answer": "Сидр для "
+	},
+    {
+        "react_id": 6,
+        "react_info": "old_fashioned",
+		"react_words": [ "коктейль", "олд", "фэшнд", "Олд", "Фэшнд", "old", "fashioned", "Old", "Fashioned"],
+		"react_answer": "Бурбон, сироп и цедра апельсина. Old Fashioned специально для "
+	},
+    {
+        "react_id": 7,
+        "react_info": "kumis",
+		"react_words": [ "кумыс", "кумыса", "Кумыс", "Кумыса"],
+		"react_answer": "Да Кирилл, держи Кирилл, угощайся "
+	},
+    {
+        "react_id": 8,
+        "react_info": "water",
+		"react_words": [ "вода", "воды", "Воды", "Вода", "водички"],
+		"react_answer": "Без проблем. Захочешь заказать чего покрепче - дай знать "
+	}
+]
