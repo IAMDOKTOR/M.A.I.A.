@@ -1,0 +1,8 @@
+# fly.toml file generated for m-a-i-a on 2022-12-09T21:08:59-05:00
+
+app = "m-a-i-a"
+kill_signal = "SIGINT"
+kill_timeout = 5
+processes = []
+
+[env]

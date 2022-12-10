@@ -28,5 +28,25 @@
         "role_id": "5",
         "role_key": "cutlet",
         "role_value": "Киберкотлеты"
+    },
+    {
+        "role_id": "6",
+        "role_key": "bookz",
+        "role_value": "Книгеры"
+    },
+    {
+        "role_id": "7",
+        "role_key": "muzik",
+        "role_value": "Музыкантеры"
+    },
+    {
+        "role_id": "8",
+        "role_key": "TBTTP",
+        "role_value": "ЛГБТКЬЮеры"
+    },
+    {
+        "role_id": "9",
+        "role_key": "alcohol",
+        "role_value": "Олкаш"
     }
 ]

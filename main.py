@@ -19,15 +19,15 @@ async def on_ready():
 @client.event
 async def on_raw_reaction_add(payload):  # give role to a user
     if payload.message_id == config.POST_ID:
-        
+
         guild = payload.member.guild
         database_role =  check_role_in_database(payload.emoji.name)
 
         discord_role = discord.utils.get(guild.roles, name=database_role)
-        
+
         if discord_role is not None:
             server_member = discord.utils.find(lambda m: m.id == payload.user_id, guild.members)
-            
+
             if server_member is not None:
                 await server_member.add_roles(discord_role)
                 print(f'[SUCCESS] {server_member.display_name} got role: {discord_role.name}')
@@ -41,16 +41,16 @@ async def on_raw_reaction_add(payload):  # give role to a user
 @client.event
 async def on_raw_reaction_remove(payload): 
     if payload.message_id == config.POST_ID:
-        
+
         guild = discord.utils.find(lambda g: g.id == payload.guild_id, client.guilds)
 
         database_role =  check_role_in_database(payload.emoji.name)
-        
+
         discord_role = discord.utils.get(guild.roles, name=database_role)
 
         if discord_role is not None:
             server_member = discord.utils.find(lambda m: m.id == payload.user_id, guild.members)
-            
+
             if server_member is not None:
                 await server_member.remove_roles(discord_role)
                 print(f'[SUCCESS] {server_member.display_name} lost role: {discord_role.name}')
@@ -101,27 +101,25 @@ async def on_message(message):
             array_message = message.content.split()
 
             for msg in array_message:
-                answer_id = check_string_in_reaction(msg)
+                answer_id = check_string_in_reaction(msg, 0)
 
                 if answer_id != None:
                     check_id_reaction[answer_id] += 1                     
-            
+
             for number in check_id_reaction:
                 if id_max <= number:
                     id_max = number
-            
+
             if id_max == 0:
                 await message.channel.send('Я вас не поняла. Попробуйте сказать иначе.')
             else:
                 id_index = check_id_reaction.index(id_max)
 
-                answer = id_reaction(id_index)
+                answer = id_reaction(id_index, 0)
                 if answer == 'СПРАВОЧНИК':
                     await message.channel.send(config.HELP_INFO)
                 else:
                     await message.channel.send(answer)
-    
-
 
 def read_token():
     return config.TOKEN
